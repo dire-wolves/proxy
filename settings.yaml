@@ -1,0 +1,89 @@
+TierService:
+  Db:
+    LogsConnString:
+      settings-key: TierService-LogsConnString
+      types: [AzureTableStorage]
+    DataConnString:
+      settings-key: TierService-DataConnString
+      types: [AzureTableStorage]
+    ClientPersonalInfoConnString:
+      settings-key: PersonalInfoConnString
+      types: [AzureTableStorage]
+  Countries:
+    Low:
+      settings-key: TierService-Countries-LowRisk
+      types: [JsonArray]
+    Mid:
+      settings-key: TierService-Countries-MidRisk
+      types: [JsonArray]
+    High:
+      settings-key: TierService-Countries-HighRisk
+      types: [JsonArray]
+  DefaultAsset:
+    settings-key: TierService-DefaultAsset
+  Limits:
+    Low:
+      settings-key: TierService-Limits-LowRisk
+      types: [JsonArray]
+    Mid:
+      settings-key: TierService-Limits-MidRisk
+      types: [JsonArray]
+    High:
+      settings-key: TierService-Limits-HighRisk
+      types: [JsonArray]
+  PushLimitsReachedAt:
+      settings-key: TierService-PushLimitsReachedAt
+      types: [JsonArray]
+  Rabbit:
+    ConnectionString:
+      settings-key: MatchingEngineRabbitMqConnectionString
+      types: [RabbitMq]
+    SpotEventsExchangeName:
+      settings-key: MatchingEngineSpotEventsExchange
+  DepositCurrencies:
+    settings-key: TierService-DepositCurrencies
+    types: [JsonArray]
+  SkipClientIds:
+    settings-key: TierService-SkipClientIds
+    types: [JsonArray]
+
+  Cqrs:
+    RabbitConnectionString:
+      settings-key: RabbitSagas
+      types: [RabbitMq]
+  Redis:
+    Configuration:
+      settings-key: RedisConfiguration
+      types: [Redis]
+    InstanceName:
+      settings-key: TierService-Redis-InstanceName
+SlackNotifications:
+  AzureQueue:
+    ConnectionString:
+      settings-key: SlackNotificationsConnString
+      types: [AzureTableStorage]
+    QueueName:
+      settings-key: SlackQueueName
+MonitoringServiceClient:
+  MonitoringServiceUrl:
+    settings-key: MonitoringServiceUrl
+ClientAccountServiceClient:
+  ServiceUrl:
+    settings-key: ClientAccountServiceUrl
+PersonalDataServiceClient:
+  ApiKey:
+    settings-key: PersonalDataApiKey
+  ServiceUri:
+    settings-key: PersonalDataServiceUrl
+TemplateFormatterServiceClient:
+  ServiceUrl:
+    settings-key: TemplateFormatterServiceUrl
+KycServiceClient:
+  ApiKey:
+    settings-key: KycService-ApiKey
+  ServiceUri:
+    settings-key: KycServiceUrl
+RateCalculatorServiceClient:
+  ServiceUrl:
+    settings-key: RateCalculatorServiceUrl
+
